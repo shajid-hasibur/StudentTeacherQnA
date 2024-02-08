@@ -19,5 +19,7 @@ namespace StudentTeacherQnA.Models
         public string Name { get; set; }
         public string InstituteName { get; set; }
         public string InstituteIDCardNumber { get; set; }
+        [Required]
+        public int UserType { get; set; }
     }
 }
