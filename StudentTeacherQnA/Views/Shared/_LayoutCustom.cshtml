@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <!-- Include any other necessary stylesheets -->
+</head>
+<body>
+    <header>
+        <!-- Header content goes here -->
+        <nav>
+            <!-- Navigation links go here -->
+            <ul>
+                <li><a href="@Url.Action("Index", "Home")">Home</a></li>
+                <!-- Add other navigation links as needed -->
+            </ul>
+        </nav>
+    </header>
+
+    <main role="main">
+        @RenderBody()
+    </main>
+
+    <footer>
+        <!-- Footer content goes here -->
+        <p>&copy; @DateTime.Now.Year - YourWebsite</p>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Include any other necessary scripts -->
+</body>
+</html>

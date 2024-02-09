@@ -12,7 +12,7 @@ using StudentTeacherQnA.Data;
 namespace StudentTeacherQnA.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240208163356_AddUserToDb")]
+    [Migration("20240209213356_AddUserToDb")]
     partial class AddUserToDb
     {
         /// <inheritdoc />
@@ -60,6 +60,10 @@ namespace StudentTeacherQnA.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("FirstName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("InstituteIDCardNumber")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -68,7 +72,7 @@ namespace StudentTeacherQnA.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Name")
+                    b.Property<string>("LastName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -76,8 +80,9 @@ namespace StudentTeacherQnA.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("UserType")
-                        .HasColumnType("int");
+                    b.Property<string>("UserType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
